@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Playfair+Display:wght@700&display=swap');
 :root {
     --white: #ffffff;
     --sage-green: #6da37f;
@@ -10,14 +10,34 @@
     color: var(--white);
 }
 h1 {
-    font-family: 'Yeseva One', cursive;
-    font-size: 8rem;
-    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
 }
 h2 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 2rem;
+}
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
     color: var(--white);
+}
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--dark-gray);
+}
+a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    user-select: none;
+}
+ul, a, li {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 html body {
     margin: 0;
@@ -25,7 +45,7 @@ html body {
 }
 section:nth-child(1) {
     display: grid;
-    place-content: center;
+    place-content: space-around;
     place-items: center;
     height: 100vh;
     background: url(images/background.jpg) no-repeat center center fixed; 
@@ -33,13 +53,62 @@ section:nth-child(1) {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: var(--white);
+}
+nav {
+    width: 95vw;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul, nav a, nav li {
+    float: left;
+}
+nav ul li a {
+    color: var(--white);
+    padding: 15px 20px;
+}
+nav ul li a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width 200ms ease-out, background-color 400ms ease;
+}
+nav ul li a:hover:after {
+    width: 80%;
+    background: var(--white);
+}
+nav div {
+    display: flex;
+    gap: 10px;
+    margin: 15px;
+}
+nav div a {
+    color: var(--white);
+    padding: 7px 8px 2px 7px;
+    border-radius: 50%;
+    transition: 100ms;
+}
+nav div a:hover {
+    background-color: var(--hover);
+    transition: 50ms;
 }
 section:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
+    color: var(--dark-gray);
+}
+.header {
+    width: 90vw;
 }
 .featuredWrapper {
     width: 150vw;
@@ -49,55 +118,59 @@ section:nth-child(2) {
     flex-direction: row;
 }
 .card {
+    width: 24rem;
+    height: 36rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: #f0f0f0;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
     height: 100%;
-    width: 400px;
-    box-shadow: 2px 2px 10px var(--shadow);
-    border-radius: 18px;
-    transition: 100ms;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-out;
 }
-.card:nth-child(1) {
-    background: url(images/card1.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.card h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset 0.3s 0.3s ease-out;
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
 }
-.card:nth-child(2) {
-    background: url(images/card2.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.card p, .card a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity 0.3s ease-out;
 }
-.card:nth-child(3) {
-    background: url(images/card3.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.card p {
+    inset: auto auto 80px 30px;
 }
-.card:nth-child(4) {
-    background: url(images/card5.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.card a {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
 }
-.card:nth-child(5) {
-    background: url(images/card4.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.card:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset 0.3s ease-out;
 }
-.card:hover {
-    transform: scale(1.05);
-    transition: 50ms ease;
+.card:hover p, .card:hover a {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s ease-in;
 }
-.informationWrapper {
-    border: solid red;
-    width: 100vw;
-    height: auto;
+.card:hover img {
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
 }
 section:nth-child(3) {
     display: grid;
