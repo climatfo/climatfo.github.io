@@ -5,78 +5,89 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="styles.css">
-      <title>Climate Change</title>
+      <link rel="stylesheet" href="locomotive-scroll.css">
+      <title>Climatfo</title>
     </head>
     <body>
-        <div>
-            <section>
+        <div data-scroll-container>
+            <section data-scroll-section="">
                 <nav>
                     <h3>CLIMATFO</h3>
                     <ul>
                         <li><a href="about.html" draggable="false">About</a></li>
-                        <li><a href="portfolio.html" draggable="false">Articles</a></li>
+                        <li><a href="articles.html" draggable="false">Articles</a></li>
                         <li><a href="contact.html" draggable="false">Contact</a></li>
                     </ul>
                 </nav>
-                <h1>THE TIME TO ACT IS NOW</h1>
+                <h1 data-scroll="" data-scroll-direction="vertical" data-scroll-speed="-1">THE TIME TO ACT IS NOW</h1>
                 <h2>Help us build a sustainable future.</h2>
             </section>
-            <section>
+            <section data-scroll-section="">
+              <div class="header">
+                <h4>WHAT IS CLIMATE CHANGE</h4>
+              </div>
+              <div class="missionWrapper">
+                <div class="missionParagraph">
+                  <h2>Causes</h2>
+                  <p>
+                    Learn about the natural and human causes of climate change and how they are impacting our planet.
+                  </p>
+                  </div>
+                  <div class="missionParagraph">
+                  <h2>Effects</h2>
+                  <p>
+                    Discover the severe consequences of climate change on our environment, communities, and human health.                  </p>
+                </div>
+                <div class="missionParagraph">
+                  <h2>Solutions</h2>
+                  <p>
+                    Understand and explore the various solutions that are being put forth to combat climate change and protect our planet.
+                  </p>
+                </div>
+              </div>
                 <div class="header">
                     <h4>FEATURED STORIES</h4>
                 </div>
                 <div class="featuredWrapper">
-                      <div class = "card">
-                        <img src="images/Earth.jpg" alt="">
-                        <div class="card-content">
+                  <a href="earthday.html">
+                      <div class="card">
+                        <img src="images/Earth.jpg">
+                        <div>
                           <h2>
                             Earth Day 2023
                           </h2>
                           <p>
                             What are some things that you can do to celebrate Earth Day in 2023?
                           </p>
-                          <a href="#" class="button">
-                            Find out more 
-                            <span class="material-symbols-outlined">
-                              arrow_right_alt
-                            </span>
-                          </a>
                         </div>
                       </div>
+                </a>
+                <a href="willowproject.html">
                       <div class = "card">
-                        <img src="images/WillowProject.jpg" alt="">
-                        <div class="card-content">
+                        <img src="images/WillowProject.jpg">
+                        <div>
                           <h2>
                             Willow Project
                           </h2>
                           <p>
                             What is the Willow Project, and why could it end the fight against climate change?
                           </p>
-                          <a href="#" class="button">
-                            Find out more 
-                            <span class="material-symbols-outlined">
-                              arrow_right_alt
-                            </span>
-                          </a>
                         </div>
-                      </div>  
+                      </div> 
+                </a> 
+                <a href="superbloom.html">
                       <div class = "card">
-                        <img src="images/Blossom.jpg" alt="">
-                        <div class="card-content">
+                        <img src="images/Blossom.jpg">
+                        <div>
                           <h2>
-                            The California Super Bloom
+                            Super Bloom
                           </h2>
                           <p>
                             How are you able to see the California Super Bloom from space, and what caused it?
                           </p>
-                          <a href="#" class="button">
-                            Find out more 
-                            <span class="material-symbols-outlined">
-                              arrow_right_alt
-                            </span>
-                          </a>
                         </div>
                       </div>
+                </a>
                 </div>
                 <div class="missionWrapper">
                   <div class="missionParagraph">
@@ -84,6 +95,8 @@
                     <p>
                       Our mission is to provide informative resources to the younger generation, empowering them to be able to make a difference in the fight against climate change.
                     </p>
+                    </div>
+                    <div class="missionParagraph">
                     <h2>Our Vision</h2>
                     <p>
                       Our vision is to increase awareness of the latest global developments that profoundly affect the future of our planet.  Our aim is to motivate individuals to proactively engage in efforts that create a positive impact on the world.
@@ -93,13 +106,34 @@
                 <div class="header">
                     <h4>WHAT CAN YOU DO</h4>
                 </div>
+                <div class="donateWrapper">
+                  <div class="donateCard">
+
+                  </div>
+                  <div class="donateCard">
+                    
+                  </div>
+                  <div class="donateCard">
+                    
+                  </div>
+                  <div class="donateCard">
+                    
+                  </div>
+                </div>
                 <div class="header">
                     <h4>QUICK LINKS</h4>
                 </div>
+                <div class="bibliographyWrapper">
+              
+                </div>
             </section>
-            <section>
-
+            <section data-scroll-section="">
+              <div>
+                <h4>Have something you want us to cover?</h4>
+              </div>
             </section>
         </div>
+        <script src="locomotive-scroll.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
