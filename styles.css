@@ -6,11 +6,23 @@
     --sage-green: #6da37f;
     --dark-gray: #333333;
     --light-gray: #444444;
+    --lighter-gray: #9b9b9b;
     --shadow: #11111135;
 }
 ::selection {
     background: var(--sage-green);
     color: var(--white);
+}
+a hr {
+    background-color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+    border-radius: 7px 7px 7px 7px;
+    width: 10px;
+    height: 50px
+}
+h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 h1 {
     font-family: "p22-mackinac-pro", serif;
@@ -18,10 +30,13 @@ h1 {
     font-style: normal;
     font-size: 6rem;
     animation: 300ms slideInTop;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 h2 {
     font-family: 'Eudoxus Sans', sans-serif;
     font-size: 2rem;
+    text-decoration: none;
 }
 h3 {
     font-family: "p22-mackinac-pro", serif;
@@ -42,10 +57,13 @@ a {
     font-weight: 600;
     font-size: 18px;
     user-select: none;
+    text-decoration: none;
+    color: var(--dark-gray);
 }
 p {
     font-family: 'Eudoxus Sans', sans-serif;
     font-size: 24px;
+    text-decoration: none;
 }
 ul, a, li {
     list-style: none;
@@ -82,14 +100,14 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-nav ul, nav a, nav li {
+ul, a, li {
     float: left;
 }
-nav ul li a {
+ul li a {
     color: var(--white);
     padding: 15px 20px;
 }
-nav ul li a:after {
+ul li a:after {
     content: '';
     display: block;
     margin: auto;
@@ -98,7 +116,7 @@ nav ul li a:after {
     background: transparent;
     transition: width 200ms ease-out, background-color 400ms ease;
 }
-nav ul li a:hover:after {
+ul li a:hover:after {
     width: 80%;
     background: var(--white);
 }
@@ -113,7 +131,7 @@ nav div a {
     border-radius: 50%;
     transition: 100ms;
 }
-nav div a:hover {
+div a:hover {
     background-color: var(--hover);
     transition: 50ms;
 }
@@ -127,8 +145,9 @@ section:nth-child(2) {
     background-color: var(--almost-white);
 }
 .header {
-    padding-left: 10vw;
-    padding-top: 40px;
+    margin-left: 10vw;
+    margin-top: 160px;
+    margin-bottom: 80px;
 }
 .featuredWrapper {
     width: 100vw;
@@ -206,19 +225,67 @@ section:nth-child(2) {
 }
 .donateWrapper {
     width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 2fr));
-    grid-template-rows: repeat(2, minmax(400px, 2fr));
-    gap: 1vw;
-    padding-bottom: 5vw;
+    height: 100vh;
     background: radial-gradient(var(--sage-green), #b4ccbc);
+    box-shadow: 0 4px 10px #00000060;
+    margin-top: 40px;
 }
 section:nth-child(3) {
     display: grid;
     place-content: center;
     place-items: center;
-    height: 95vh;
+    height: 80vh;
     background-color: var(--dark-gray);
+}
+.bibliographyWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 60px;
+}
+.bibliographyRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 70vw;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 500ms;
+}
+.bibliographyRow:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px #00000010;
+    transition: 200ms;
+    cursor: pointer;
+}
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    color: var(--almost-white);
+}
+.footerWrapper a {
+    color: var(--almost-white);
+}
+.footerWrapper h4 {
+    color: var(--almost-white);
+}
+.bottom {
+    color: var(--almost-white);
+    position: absolute;
+    bottom: 80px;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 /*Animations*/
 @keyframes slideInTop {
