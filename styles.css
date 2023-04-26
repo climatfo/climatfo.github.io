@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Playfair+Display:wght@700&display=swap');
+@import url("https://use.typekit.net/akz2mas.css");
+@import url("https://stijndv.com/fonts/Eudoxus-Sans.css");
 :root {
     --white: #ffffff;
     --almost-white: #eeeeee;
@@ -11,51 +12,39 @@
     background: var(--sage-green);
     color: var(--white);
 }
-::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--dark-gray);
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--light-gray);
-  }
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: "p22-mackinac-pro", serif;
+    font-weight: 800;
+    font-style: normal;
     font-size: 6rem;
     animation: 300ms slideInTop;
 }
 h2 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Eudoxus Sans', sans-serif;
     font-size: 2rem;
 }
 h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "p22-mackinac-pro", serif;
+    font-weight: 800;
+    font-style: normal;
     font-size: 18px;
     color: var(--white);
 }
 h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: "p22-mackinac-pro", serif;
+    font-weight: 800;
+    font-style: normal;
     font-size: 3rem;
     color: var(--dark-gray);
 }
 a {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Eudoxus Sans', sans-serif;
     font-weight: 600;
     font-size: 18px;
     user-select: none;
 }
 p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Eudoxus Sans', sans-serif;
     font-size: 24px;
 }
 ul, a, li {
@@ -69,13 +58,14 @@ html body {
     padding: 0;
     overflow: overlay;
     overflow-x: hidden;
+    height: 100vh;
 }
 section:nth-child(1) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 100vh;
     background: url(images/background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -137,25 +127,31 @@ section:nth-child(2) {
     background-color: var(--almost-white);
 }
 .header {
-    padding-left: 5vw;
+    padding-left: 10vw;
+    padding-top: 40px;
 }
 .featuredWrapper {
     width: 100vw;
     height: 600px;
     display: flex;
     justify-content: center;
-    gap: 5vw;
+    gap: 40px;
     flex-direction: row;
 }
 .card {
-    width: 24rem;
-    height: 36rem;
-    border-radius: 10px;
+    width: 25rem;
+    height: 32rem;
+    border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
     color: #f0f0f0;
     box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    transition: 500ms;
+}
+.card:hover {
+    transform: scale(1.01);
+    transition: 200ms;
 }
 .card img {
     position: absolute;
@@ -183,15 +179,10 @@ section:nth-child(2) {
     transition: opacity 0.3s ease-out;
 }
 .card p {
-    inset: auto auto 80px 30px;
-}
-.card a {
-    inset: auto auto 40px 30px;
-    color: inherit;
-    text-decoration: none;
+    inset: auto auto 20px 30px;
 }
 .card:hover h2 {
-    inset: auto auto 500px 30px;
+    inset: auto auto 450px 30px;
     transition: inset 0.3s ease-out;
 }
 .card:hover p, .card:hover a {
@@ -203,35 +194,24 @@ section:nth-child(2) {
     opacity: 1;
 }
 .missionWrapper {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 5vw;
 }
 .missionParagraph {
-    width: 90vw;
+    width: 25vw;
     height: auto;
 }
-.linksWrapper {
-    width: 90vw;
+.donateWrapper {
+    width: 100vw;
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 2fr));
-    grid-template-rows: repeat(2, minmax(150px, 2fr));
+    grid-template-rows: repeat(2, minmax(400px, 2fr));
     gap: 1vw;
     padding-bottom: 5vw;
-}
-.test {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-.test img {
-    object-fit: cover;
-    width: 100%;
-    height: 800px;
-    box-shadow: 0 10px 30px 5px #00000020;
+    background: radial-gradient(var(--sage-green), #b4ccbc);
 }
 section:nth-child(3) {
     display: grid;
