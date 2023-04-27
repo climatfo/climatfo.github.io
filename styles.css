@@ -144,9 +144,33 @@ section:nth-child(2) {
     color: var(--dark-gray);
     background-color: var(--almost-white);
 }
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.donateCardRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.donateCard {
+    background-color: #eeeeee90;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    border: 2px solid var(--almost-white);
+}
+.donateCard h2, p {
+    margin: 14px;
+}
 .header {
     margin-left: 10vw;
-    margin-top: 160px;
+    margin-top: 80px;
     margin-bottom: 80px;
 }
 .featuredWrapper {
@@ -231,11 +255,13 @@ section:nth-child(2) {
     margin-top: 40px;
 }
 section:nth-child(3) {
-    display: grid;
-    place-content: center;
-    place-items: center;
-    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
     background-color: var(--dark-gray);
+    height: 75vh;
 }
 .bibliographyWrapper {
     display: flex;
@@ -279,13 +305,27 @@ section:nth-child(3) {
 }
 .bottom {
     color: var(--almost-white);
-    position: absolute;
-    bottom: 80px;
     width: 100vw;
-    height: 100px;
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+/*WillowProject*/
+.willowProject {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--almost-white);
+}
+.willowProject h3,.willowProject p,.willowProject ul li a {
+    color: var(--dark-gray);
+}
+.willowProject ul li a:hover:after {
+    width: 80%;
+    background: var(--dark-gray);
 }
 /*Animations*/
 @keyframes slideInTop {
@@ -328,5 +368,9 @@ section:nth-child(3) {
     }
     p {
         font-size: 14px;
+    }
+    .donateCard {
+        width: 300px;
+        height: 150px;
     }
 }
