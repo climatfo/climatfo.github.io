@@ -78,7 +78,7 @@ html body {
     overflow-x: hidden;
     height: 100vh;
 }
-section:nth-child(1) {
+.sectionOne {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,7 +135,7 @@ div a:hover {
     background-color: var(--hover);
     transition: 50ms;
 }
-section:nth-child(2) {
+.sectionTwo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -254,7 +254,7 @@ section:nth-child(2) {
     box-shadow: 0 4px 10px #00000060;
     margin-top: 40px;
 }
-section:nth-child(3) {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -312,20 +312,66 @@ section:nth-child(3) {
     align-items: center;
 }
 /*WillowProject*/
-.willowProject {
+.article {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
     background-color: var(--almost-white);
 }
-.willowProject h3,.willowProject p,.willowProject ul li a {
+.article h3,.article p,.article ul li a {
     color: var(--dark-gray);
 }
-.willowProject ul li a:hover:after {
+.article ul li a:hover:after {
     width: 80%;
     background: var(--dark-gray);
+}
+.articleHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vw;
+    margin-top: 100px;
+}
+.articleTitle {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+.articleImage {
+    width: 400px;
+    height: 600px;
+}
+.articleImage img {
+    width: 480px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #00000030;
+}
+.text {
+    width: 100vw;
+    margin-top: 80px;
+    height: fit-content;
+    background-color: var(--dark-gray);
+    border-radius: 34px 34px 0 0;
+    box-shadow: 0 4px 10px #000000;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.text h2 {
+    color: #ffffff;
+    font-family: "p22-mackinac-pro", serif;
+    margin-left: 15vw;
+    line-height: 80px;
+}
+.text p {
+    color: #ffffff;
+    text-indent: 60px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    line-height: 40px;
+    font-size: 18px;
 }
 /*Animations*/
 @keyframes slideInTop {
