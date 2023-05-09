@@ -1,6 +1,5 @@
 @import url("https://use.typekit.net/akz2mas.css");
 @import url("https://stijndv.com/fonts/Eudoxus-Sans.css");
-* { outline: 1px red solid !important; visibility: visible !important }
 :root {
     --white: #ffffff;
     --almost-white: #eeeeee;
