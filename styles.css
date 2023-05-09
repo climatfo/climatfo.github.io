@@ -351,6 +351,7 @@ sup {
     align-items: center;
     gap: 10vw;
     margin-top: 100px;
+    z-index: -1;
 }
 .articleTitle {
     display: flex;
@@ -374,7 +375,7 @@ sup {
     background-color: var(--dark-gray);
     border-radius: 34px 34px 0 0;
     box-shadow: 0 4px 10px #000000;
-    padding-bottom: 300px;
+    padding-bottom: 450px;
     padding-top: 50px;
 }
 .text h2 {
