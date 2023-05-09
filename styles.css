@@ -580,8 +580,8 @@ sup {
     }
 }
 @media screen and (min-width: 300px) and (max-width: 699px) {
-    body::-webkit-scrollbar{
-    display: none;
+    body::-webkit-scrollbar {
+    appearance: none;
     }
     h1 {
         font-size: 28px;
