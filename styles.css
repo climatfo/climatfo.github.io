@@ -692,7 +692,7 @@ sup {
         margin-left: 16px;
     }
     .sectionOne {
-        background: url(images/background\ -\ Copy.jpg) no-repeat center center fixed; 
+        background: url(images/background\ -\ Copy.jpg) no-repeat center center scroll; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
