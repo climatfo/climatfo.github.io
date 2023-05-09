@@ -314,6 +314,7 @@ sup {
     align-items: center;
     width: 100vw;
     color: var(--almost-white);
+    text-align: center;
 }
 .footerWrapper a {
     color: var(--almost-white);
@@ -351,7 +352,6 @@ sup {
     align-items: center;
     gap: 10vw;
     margin-top: 100px;
-    z-index: 0;
 }
 .articleTitle {
     display: flex;
@@ -401,8 +401,8 @@ sup {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 999999;
     pointer-events: none;
     background: var(--almost-white);
@@ -476,6 +476,11 @@ sup {
 }
 .fact h2 {
     color: var(--sage-green);
+}
+.footerWrapper ul, .footerWrapper li, .footerWrapper a {
+    float: none;
+    display: inline-block;
+    text-align: center;
 }
 /*Viewports*/
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
@@ -564,8 +569,7 @@ sup {
         margin: 0;
     }
     .bibliographyRow {
-        width: 100vw;
-        padding: 10px;
+        width: 90vw;
         margin: 4px;
     }
     .bibliographyRow h2 {
@@ -580,9 +584,6 @@ sup {
     }
 }
 @media screen and (min-width: 300px) and (max-width: 699px) {
-    body::-webkit-scrollbar {
-    appearance: none;
-    }
     h1 {
         font-size: 28px;
     }
@@ -667,17 +668,19 @@ sup {
         justify-content: center;
         align-items: center;
         margin: 10px;
+        width: 90vw;
     }
     .missionParagraph {
-        width: 400px;
+        width: 300px;
     }
     h4 {
         font-size: 24px;
     }
+    .bibliographyWrapper {
+        width: 90vw;
+    }
     .bibliographyRow {
-        width: 100vw;
-        padding: 10px;
-        margin: 4px;
+        width: 80vw;
     }
     .bibliographyRow h2 {
         font-size: 12px;
