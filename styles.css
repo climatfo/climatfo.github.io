@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/akz2mas.css");
 @import url("https://stijndv.com/fonts/Eudoxus-Sans.css");
+* { outline: 1px red solid !important; visibility: visible !important }
 :root {
     --white: #ffffff;
     --almost-white: #eeeeee;
@@ -569,8 +570,7 @@ sup {
         margin: 0;
     }
     .bibliographyRow {
-        width: 90vw;
-        margin: 4px;
+        width: 100vw;
     }
     .bibliographyRow h2 {
         font-size: 18px;
@@ -677,17 +677,21 @@ sup {
         font-size: 24px;
     }
     .bibliographyWrapper {
-        width: 90vw;
+        width: 100vw;
     }
     .bibliographyRow {
-        width: 80vw;
+        width: 90vw;
+        padding: 20px
     }
     .bibliographyRow h2 {
         font-size: 12px;
     }
     .bibliographyRow p {
         font-size: 8px;
-        max-width: 200px;
+        max-width: 180px;
+    }
+    .bibliographyRow sup {
+        font-size: 8pt;
     }
     .bibliographyRow hr {
         transform: translatex(-50px);
